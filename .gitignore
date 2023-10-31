@@ -1,0 +1,9 @@
+/.idea
+/bin
+/target
+/test-output
+/.settings
+/logs
+/extentV5
+/allure-results
+/allure-report

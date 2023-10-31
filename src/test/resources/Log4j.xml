@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- console -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- logfile.txt lưu lần chạy mới nhất-->
+	<appender name="logfile" class="org.apache.log4j.FileAppender">
+		<param name="File" value="./logs/demo.txt" />
+		<param name="append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- file.log lưu giới hạn 10MB-->
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="./logs/demo.log" />
+		<param name="append" value="true" />
+		<param name="maxFileSize" value="10MB" />
+		<param name="maxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%-5p] [%d] %m%n" />
+		</layout>
+	</appender>
+
+	<category name="hero_trading.HR_TC001_SellAHeroSuccessfully">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC002_SellAHeroThatWasBoughtFromMarketplaceSuccessfully">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC003_SellAHeroThatWasCanceledSellingBefore">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC004_CancelSellingAHero">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC005_CanNotSellAHeroWithPriceThatIsLessThanMinPrice">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC006_CanNotSellAHeroWithPriceThatIsGreaterThanMaxPrice">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC007_CanNotSellAHeroWhenNotInputPrice">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC008_CanNotSellAHeroHavingStatusSelling">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC013_CancelSellingTransaction">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC014_StopSellingAHeroSuccessfully">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HR_TC015_StopSellingAHeroUnsuccessfullyBecauseOfNotEnoughBNBForGasFee">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HT_TC017_BuyAHeroSuccessfully">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HT_TC018_BuyAHeroUnsuccessfullyBecauseOfNotEnoughBalance">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="hero_trading.HT_TC019_BuyAHeroUnsuccessfullyBecauseOfNotEnoughBNBForGasFee">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="file" />
+	</category>
+
+	<root>
+		<priority value="warn" />
+	</root>
+</log4j:configuration>
