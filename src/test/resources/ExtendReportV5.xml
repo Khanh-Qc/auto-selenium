@@ -13,8 +13,7 @@
 		<listener class-name="reportConfig.AllureTestListener" />
 	</listeners>
 
-<!--	<parameter name="url" value="https://marketplace.uat.thetanarena.com/" />-->
-	<parameter name="url" value="https://demoqa.com/links" />
+	<parameter name="url" value="https://marketplace.uat.thetanarena.com/" />
 
 	<test name="RUN ON CHROME">
 		<parameter name="browser" value="CHROME" />
